@@ -67,6 +67,8 @@ const navigation = [
   ['Contact', 'contact'],
 ];
 
+const publicAsset = (filename) => `${import.meta.env.BASE_URL}${filename}`;
+
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -82,7 +84,7 @@ export default function App() {
       <header className="site-header">
         <div className="container header-inner">
           <a className="brand" href="#home" onClick={closeMenu} aria-label="Ads Sathi home">
-            <img src="/ad-saathi-logo.jpeg" alt="" className="brand-logo" />
+            <img src={publicAsset('ad-saathi-logo.jpeg')} alt="" className="brand-logo" />
             <span className="brand-copy">
               <strong>ADS SATHI</strong>
               <span>META ADS · GAYA, BIHAR</span>
@@ -161,7 +163,7 @@ export default function App() {
                 <span className="portrait-indicator"><i /> ADS SATHI</span>
               </div>
               <img
-                src="/shubham-kumar-profile.png"
+                src={publicAsset('shubham-kumar-profile.png')}
                 alt="Shubham Kumar, founder of Ads Sathi"
                 className="portrait"
               />
@@ -346,7 +348,7 @@ export default function App() {
               </div>
             </div>
             <div className="contact-brand-card">
-              <img src="/ad-saathi-logo.jpeg" alt="Ads Sathi logo" />
+              <img src={publicAsset('ad-saathi-logo.jpeg')} alt="Ads Sathi logo" />
               <span className="contact-location"><i /> BASED IN GAYA, BIHAR</span>
               <strong>Ads Sathi</strong>
               <p>Helping businesses get seen by the people they want to reach.</p>
@@ -361,7 +363,7 @@ export default function App() {
       <footer className="site-footer">
         <div className="container footer-main">
           <a className="brand footer-brand" href="#home" onClick={closeMenu}>
-            <img src="/ad-saathi-logo.jpeg" alt="" className="brand-logo" />
+            <img src={publicAsset('ad-saathi-logo.jpeg')} alt="" className="brand-logo" />
             <span className="brand-copy">
               <strong>ADS SATHI</strong>
               <span>META ADS · GAYA, BIHAR</span>

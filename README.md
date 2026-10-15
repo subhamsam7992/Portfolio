@@ -29,6 +29,18 @@ Command Prompt.
 
 Run `npm run build`. Vite creates the production-ready website in `dist/`. Preview it locally with `npm run preview`.
 
+## Publish on GitHub Pages
+
+This repository includes a GitHub Actions workflow that builds the Vite app and
+deploys the `dist/` output. For the first deployment, open the repository's
+**Settings → Pages** and set **Build and deployment → Source** to **GitHub
+Actions**. Then push to `main` (or manually run **Deploy to GitHub Pages** from
+the **Actions** tab). The site will be available at
+`https://subhamsam7992.github.io/Portfolio/` after the workflow succeeds.
+
+The production build uses the `/Portfolio/` base path required by GitHub Pages.
+Local development and other root-domain deployments such as Vercel use `/`.
+
 ## Publish with GitHub and Vercel
 
 1. Create a new, empty repository on GitHub.
